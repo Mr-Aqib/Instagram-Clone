@@ -12,7 +12,7 @@ $read = "SELECT * FROM Signup WHERE Username ='{$username}' AND Password = '{$pa
 $result = mysqli_query($connection, $read);
 if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
-        $_SESSION['Welcome'] = 'Welcome' . $ror['Username'];
+        $_SESSION['Welcome'] = 'Welcome' . $row['Username'];
         $_SESSION['Username'] = $row['Username'];
     }
     header("Location: $base_url/login-check.php");
