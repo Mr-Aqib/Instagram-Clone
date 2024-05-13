@@ -24,12 +24,12 @@
                             <img class="rounded-4 border border-4" style="object-fit:cover;" class="" width="80%" height="600px" src="./postimages/<?php echo $row['Image'] ?>" alt="">
                         </div>
                     </div>
-                    <div class="col-lg-6 my-3 shadow rounded-3">
-                        <div class="d-flex flex-column shadow rounded-4 p-1">
+                    <div class="col-lg-6 border shadow rounded-3">
+                        <div class="d-flex my-3 border flex-column shadow rounded-4 p-1">
                             <div>
-                                <img style="object-fit: cover" class=" border  shadow mx-3 rounded-circle" width="60px" height="60px" src="./storyimages/user3.avif" alt="">
+                                <img style="object-fit: cover" class=" rounded-circle" width="60px" height="60px" src="./storyimages/user3.avif" alt="">
                             </div>
-                            <p class="m-0 mx-3 fw-bold my-1 ">
+                            <p class=" mx-3 fw-bold my-1 ">
                                 <span class="fw-normal"> Caption:</span> <?php echo $row['Caption'] ?>
                             </p>
                         </div>
