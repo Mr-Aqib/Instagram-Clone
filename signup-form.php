@@ -34,6 +34,7 @@
 </head>
 
 <body>
+
     <div class="container col-lg-7   ">
         <div class="upperdiv my-3  border  mx-auto" style="width: 350px;padding:10px 2.9rem">
             <img class="mx-auto d-block" width="180px" src="./images/insta-logo.png" alt="">

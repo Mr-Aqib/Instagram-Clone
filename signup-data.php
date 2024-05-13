@@ -12,5 +12,9 @@ if ($email == '' || $fullname == '' || $username == '' || $password == '') {
 } else {
     $insert = "INSERT into Signup (Email,Fullname,Username,Password) VALUES ('{$email}','{$fullname}','{$username}','{$password}')";
     mysqli_query($connection, $insert);
-    header("Location: $current_url");
+    $_SESSION['Welcome'] = 'Welcome' . $username;
+    $_SESSION['Username'] = $username;
+    $_SESSION['Id'] = mysqli_insert_id($connection);
+    header("Location: $base_url/login-check.php");
 }
+?>;

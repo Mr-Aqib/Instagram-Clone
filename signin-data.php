@@ -11,6 +11,7 @@ if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         $_SESSION['Welcome'] = 'Welcome' . $row['Username'];
         $_SESSION['Username'] = $row['Username'];
+        $_SESSION['Id'] = $row['Id'];
     }
     header("Location: $base_url/login-check.php");
 } else {
