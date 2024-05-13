@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <?php include './Boot-js.php' ?>
+    <?php include './Boot-js.php';
+    session_start(); ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram</title>
@@ -110,7 +111,7 @@
 
                         </div>
                         <?php
-                        session_start();
+
                         if (isset($_SESSION['Login-Details-Err'])) {
                             echo "<p class='text-center fw-bold text-danger'  style='font-size:13px'>
                     {$_SESSION['Login-Details-Err']} 

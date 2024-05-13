@@ -1,6 +1,5 @@
  <!-- Button trigger modal -->
- <a type="button" class="d-flex flex-row gap-1" style="color:black ;text-decoration: none;" data-bs-toggle="modal"
-     data-bs-target="#exampleModal1">
+ <a type="button" class="d-flex flex-row gap-1" style="color:black ;text-decoration: none;" data-bs-toggle="modal" data-bs-target="#exampleModal1">
      <i class="bi bi-file-earmark-post-fill"></i>
      <p class="m-0">Upload Post</p>
  </a>
@@ -14,13 +13,12 @@
                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
              </div>
              <div class="modal-body">
-                 <form action="./story-data.php" method="POST" enctype="multipart/form-data">
+                 <form action="./post-data.php" method="POST" enctype="multipart/form-data">
                      <label for="">Caption</label>
                      <input class="form-control" type="text" name="caption" id="">
                      <label for="">Upload Story</label>
                      <input class="form-control" type="file" name="image" id="">
-                     <button class="w-50 d-block mx-auto border-0 my-4 text-white p-1 rounded-3"
-                         style="background:linear-gradient(to right, red,yellow)">Upload
+                     <button class="w-50 d-block mx-auto border-0 my-4 text-white p-1 rounded-3" style="background:linear-gradient(to right, red,yellow)">Upload
                          Story</button>
                  </form>
              </div>
