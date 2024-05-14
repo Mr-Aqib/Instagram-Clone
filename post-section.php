@@ -27,15 +27,24 @@ if (mysqli_num_rows($result) > 0) {
                 <img style="object-fit:cover;" class="" width="100%" height="800px" src="./postimages/<?php echo $row['Image'] ?>" alt="">
             </a>
             <p class="m-0 p-1 mx-2 caption">Caption: <?php echo $row['Caption'] ?></p>
-            <div class="my-1 last d-flex flex-row  justify-content-between">
-                <div class="d-flex mx-2 gap-2 align-items-center justify-content-center">
-                    <div class=" bi bi-heart"></div>
-                    <div class=" bi bi-chat"></div>
-                    <i class=" bi bi-share-fill"></i>
+            <div class="my-1 last d-flex flex-column gap-2 ">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex mx-2 gap-2 align-items-center justify-content-center">
+                        <div class=" bi bi-heart"></div>
+                        <div class=" bi bi-chat"></div>
+                        <i class=" bi bi-share-fill"></i>
+                    </div>
+                    <div class="last ">
+                        <div class="bi bi-save mx-2"></div>
+                    </div>
                 </div>
-                <div class="last">
-                    <div class="bi bi-save mx-2"></div>
-                </div>
+                <form action="./comment-data.php" method="POST">
+                    <div class="border-secondary d-flex flex-row align-items-center">
+                        <input type="hidden" value="<?php echo $row['post_id'] ?>" id="" name="postid">
+                        <input type="text" placeholder="Add a comment" name="comment" class="comment form-control border-0" style="box-shadow: 0 0 0 0">
+                        <button class="bi bi-send mx-3 border-0 bg-white " style="transition:all .5s"></button>
+                    </div>
+                </form>
             </div>
         </div>
 
